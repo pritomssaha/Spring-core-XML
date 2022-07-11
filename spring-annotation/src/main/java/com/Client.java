@@ -11,6 +11,7 @@ public class Client {
 		ConfigurableApplicationContext ctc=new ClassPathXmlApplicationContext("beans.xml");
 		InterestService interService=ctc.getBean("interestService", InterestService.class);
 		System.out.println(interService.getInterest());
+		ctc.close();
 
 	}
 
